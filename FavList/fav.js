@@ -24,10 +24,10 @@ async function renderHeroList() {
   for (let i = 0; i < listOfHeros.length; i++) {
     id = listOfHeros[i];
     const response = await fetch(
-      `https://gateway.marvel.com/v1/public/characters/${id}?apikey=c2595c6e10b8e75e6bd3b3c61b14547c&hash=77964d9b5c2bef6213992685d7c2dfd4&ts=1`
+      `https://gateway.marvel.com/v1/public/characters/${id}?apikey=4a0de140540f73b7ebc8b9816b51defd&hash=ef2adfa67e8de20cc93d4d4c9be0b04f&ts=1`
     );
     heroDetails = (await response.json()).data.results[0];
-    console.log("heroDetails", heroDetails);
+    // console.log("heroDetails", heroDetails);
     addHerosToDOM(heroDetails);
   }
 }
@@ -38,7 +38,7 @@ function handleKeyAndClick(e) {
     let heroId = e.target.dataset.id;
     localStorage.setItem("heroId", JSON.stringify(heroId));
 
-    window.open("../details/details.html");
+    window.open("../Details/details.html");
   }
 
   if (e.target.id === "delete") {

@@ -11,10 +11,10 @@ let seriesNumber = document.getElementById("seriesNumber");
 let comicNumber = document.getElementById("comicNumber");
 async function fetchHeroDetails(id) {
   const response = await fetch(
-    `https://gateway.marvel.com/v1/public/characters/${id}?apikey=c2595c6e10b8e75e6bd3b3c61b14547c&hash=77964d9b5c2bef6213992685d7c2dfd4&ts=1`
+    `https://gateway.marvel.com/v1/public/characters/${id}?apikey=4a0de140540f73b7ebc8b9816b51defd&hash=ef2adfa67e8de20cc93d4d4c9be0b04f&ts=1`
   );
   heroDetails = (await response.json()).data.results[0];
-  console.log(heroDetails);
+  // console.log(heroDetails);
   if (heroDetails.description.length != 0)
     description.innerHTML += `<h3>${heroDetails.description}</h3>`;
   else description.innerHTML += `<h3>Description Not available</h3>`;
@@ -25,7 +25,7 @@ async function fetchHeroDetails(id) {
     if (("0" <= i && i <= "9") || i == "-") parsedDate += i;
     else break;
   }
-  console.log("date",parsedDate);
+  // console.log("date",parsedDate);
   releaseDate.innerHTML += `<h3>${parsedDate}</h3>`;
   imgEle.setAttribute(
     "src",
