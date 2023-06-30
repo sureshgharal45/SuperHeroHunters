@@ -2,7 +2,7 @@
 
 # About project:
 
-This is basically the project where we can search for our favourite superhero and that we are fetching it from the given API in the document and we are displaying various things
+This is basically the project where we can search for our favourite superhero and that we are fetching it from the given API structure in the document and we are displaying various things
 regarding the searched superhero also we can add the superhero in our favourite list and we can remove the superhero from the favourite list. We have to fetch the superhero from 
 api for that we have an API key which will get from the marvel developers account after signing in then we have to create the hash by installing crypto-js package so we can have
 md5(ts+private_key+public_key) or the alternative to create hash by using online hash generator from the internet.
