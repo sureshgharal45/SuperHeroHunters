@@ -90,7 +90,7 @@ function handleKeyAndClick(e) {
     let heroId = e.target.dataset.id;
     localStorage.setItem("heroId", JSON.stringify(heroId));
 
-    window.open("./details/details.html");
+    window.open("./Details/details.html");
   }
   if (e.target.id === "favBtn") {
     addToFav(e.target.dataset.id, e.target.dataset.title);
